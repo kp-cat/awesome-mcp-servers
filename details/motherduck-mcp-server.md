@@ -1,30 +1,85 @@
-# MotherDuck MCP Server
-
 ## Overview
-The **MotherDuck MCP Server** is an open-source Model Context Protocol (MCP) server that connects AI assistants and IDEs to data stored in **MotherDuck** and **local DuckDB** instances, enabling SQL-based querying and analytics over those databases.
 
-- **Repository:** https://github.com/motherduckdb/mcp-server-motherduck
-- **Category:** MCP server / tools directory
+Connect AI assistants to your data using DuckDB's powerful analytical SQL engine through the MotherDuck MCP Server. This server supports connecting to local DuckDB files, in-memory databases, S3-hosted databases, and MotherDuck cloud analytics platform. Runs in read-only mode by default for safety.
 
 ## Features
-- **MCP server implementation for DuckDB and MotherDuck**  
-  Provides a Model Context Protocol server that exposes DuckDB and MotherDuck databases to compatible AI agents and tools.
 
-- **MotherDuck database integration**  
-  Connects to MotherDuck-hosted databases so agents can run SQL queries and analyze cloud-hosted data.
+### Multiple Connection Types
+- **Local DuckDB Files**: Query .duckdb files on your filesystem
+- **In-Memory Databases**: Temporary analytical workloads
+- **S3-Hosted Databases**: Query data directly from object storage
+- **MotherDuck Cloud**: Connect to serverless DuckDB in the cloud
 
-- **Local DuckDB integration**  
-  Supports connecting to local DuckDB files/instances, allowing analysis of on-disk or local data via the same MCP interface.
+### Query Capabilities
+- **Analytical SQL**: Full DuckDB SQL dialect support
+- **Parquet Files**: Direct queries on columnar data
+- **CSV/JSON**: Read structured and semi-structured data
+- **External Tables**: Query data without importing
 
-- **SQL analytics capabilities**  
-  Enables AI assistants and IDEs to issue SQL queries for exploration, aggregation, and analysis of data stored in DuckDB or MotherDuck.
+### Safety Features
+- **Read-Only Default**: Prevents accidental data modification
+- **Write Mode Available**: Add --read-write flag when needed
+- **Transaction Support**: ACID guarantees for data integrity
+- **Query Validation**: Syntax checking before execution
 
-- **Designed for AI assistants and IDEs**  
-  Intended to be embedded in development tools and AI workflows so that agents can work directly with structured data sources.
+## DuckDB Capabilities
 
-- **Configurable via environment (e.g., tokens)**  
-  Uses configuration such as a `motherduck_token` environment variable (per example install config) to authenticate to MotherDuck.
+### Performance
+- In-process analytical database
+- Columnar storage for fast aggregations
+- Parallel query execution
+- Efficient compression
+
+### Integrations
+- Direct S3/GCS/Azure Blob queries
+- Parquet, CSV, JSON support
+- Arrow integration
+- PostgreSQL wire protocol
+
+### Advanced Features
+- Window functions and CTEs
+- Full-text search
+- Geospatial queries (PostGIS extension)
+- Machine learning extensions
+
+## Use Cases
+
+### Data Exploration
+- Analyze CSV and Parquet files without importing
+- Query S3 data lakes directly
+- Perform ad-hoc analysis on local data
+- Join data from multiple sources
+
+### Business Intelligence
+- Generate reports from analytical queries
+- Calculate aggregations and metrics
+- Analyze time-series data
+- Create data visualizations
+
+### Data Pipelines
+- Transform data with SQL
+- Validate data quality
+- Test ETL transformations locally
+- Debug data processing issues
+
+### RAG Applications
+- Vector similarity search with HNSW indexing
+- Semantic search over embeddings
+- Hybrid search combining text and vectors
+- High-performance retrieval for AI applications
+
+## MotherDuck Cloud Benefits
+
+- Serverless DuckDB with zero infrastructure
+- Share databases across team members
+- Scale compute automatically
+- Persistent storage in the cloud
+- Collaborate on analytical workflows
+
+## Integration
+
+Works with Claude, Cursor, and other MCP-compatible AI tools. Requires DuckDB installed locally or MotherDuck account for cloud analytics.
 
 ## Pricing
-- **Pricing model:** Not specified.  
-  The project is distributed as an open-source GitHub repository; no commercial plans or pricing details are listed in the provided content.
+
+DuckDB is free and open-source. MotherDuck offers free tier with generous limits and usage-based pricing for cloud analytics.

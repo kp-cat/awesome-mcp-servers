@@ -1,40 +1,63 @@
-# Okta MCP Server
-
 ## Overview
-Okta MCP Server is an MCP-compatible integration that allows AI agents and other MCP tools to interact with Okta’s cloud-based identity and access management (IAM) platform. It supports operations related to user management within Okta, including creating, retrieving, and updating user profiles, and can be used in workflows involving SSO and MFA.
 
-**Category:** Security / Attestation MCP Servers  
-**Vendor:** Okta (via Pipedream)  
-**MCP Server URL:** `https://mcp.pipedream.net/v2`
+The Okta MCP Server acts as a structured bridge between AI agents and your Okta environment, enabling natural language control of identity tasks while ensuring API calls are strictly governed, scoped, and auditable. Manage users, groups, applications, and policies through AI assistants with enterprise-grade security.
 
 ## Features
-- **MCP-compatible server endpoint**  
-  - Static MCP server URL (`https://mcp.pipedream.net/v2`) usable across different MCP clients.  
-  - Authentication performed when adding the server to an MCP-compatible application or chat client.
 
-- **Okta identity and access management integration**  
-  - Connects to Okta’s cloud-based IAM platform.  
-  - Supports workflows involving single sign-on (SSO).  
-  - Supports workflows involving multi-factor authentication (MFA).  
-  - Enables secure access and management of user identities for applications.
+### Identity Management
+- **User Operations**: Create, update, delete, and search users
+- **Group Management**: Organize users into groups and manage memberships
+- **Application Access**: View and configure user access to applications
+- **System Logs**: Retrieve and analyze audit logs for compliance
 
-- **Available tools (actions)**
-  - **Create User**  
-    - Creates a new user in the Okta system.  
-    - Exposed as an MCP tool/action for programmatic or AI-driven user provisioning.
+### Security & Governance
+- **Scoped Access**: AI only has access to specific scopes granted
+- **Audit Logging**: Every action is logged for compliance and review
+- **Credential Security**: Credentials managed via secure environment variables
+- **OAuth 2.0 Authentication**: Industry-standard security protocols
 
-  - **Get User**  
-    - Fetches information for a specific user from the Okta system.  
-    - Useful for querying user profiles, status, and attributes via MCP-enabled clients.
+### Authentication Methods
+- **Interactive Login**: Device Authorization Grant for user-driven workflows
+- **Automated Login**: Private Key JWT for browserless, fully automated processes
+- **SSO Integration**: Connect with existing identity providers
 
-  - **Update User**  
-    - Updates the profile of a specific user in the Okta system.  
-    - Supports modifying existing user attributes through MCP-based workflows.
+## Use Cases
 
-## Technical Details
-- **Server type:** MCP Server (Model Context Protocol)  
-- **Integration host:** Pipedream  
-- **Primary scope:** Okta user management (create, read, update)
+### User Provisioning
+- Automate user onboarding and offboarding
+- Bulk user creation and updates
+- Self-service password resets
+- Access request workflows
+
+### Access Management
+- Grant and revoke application access
+- Manage group memberships
+- Review and update user permissions
+- Enforce least privilege policies
+
+### Compliance & Reporting
+- Generate access reports
+- Audit user activities
+- Monitor authentication events
+- Track permission changes
+
+### IT Automation
+- Automate routine identity tasks
+- Integrate with helpdesk workflows
+- Streamline access reviews
+- Manage application assignments
+
+## Supported AI Platforms
+
+- Claude Desktop
+- Microsoft Copilot Studio
+- Fast-agent
+- Any MCP-compatible client
+
+## Integration
+
+Works seamlessly with Okta's identity platform, supporting both Okta Workforce Identity and Customer Identity Cloud. Requires Okta API credentials and appropriate permissions.
 
 ## Pricing
-No pricing information is provided in the available content.
+
+MCP server is available with all Okta plans. Okta offers free developer accounts and usage-based pricing for production deployments.

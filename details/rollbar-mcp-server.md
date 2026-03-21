@@ -1,23 +1,52 @@
-# Rollbar MCP Server
+## Overview
 
-**Category:** Monitoring  
-**Tags:** error-tracking, observability, debugging
-
-An MCP (Model Context Protocol) server that connects Rollbar’s error monitoring and tracking capabilities to MCP-compatible agents, helping identify and resolve code errors more quickly.
+The Rollbar MCP Server provides a bridge to Rollbar's error tracking platform, enabling AI assistants to interact with error data, manage projects, track deployments, and analyze application health. This server allows developers to debug and monitor errors using natural language commands.
 
 ## Features
 
-- **MCP-compatible error monitoring:** Exposes Rollbar’s error tracking capabilities to any client that supports the Model Context Protocol.
-- **Central MCP endpoint:** Uses a single static MCP server URL (`https://mcp.pipedream.net/v2`) that works across all supported clients.
-- **Client-agnostic integration:** Designed to be added to different chat or AI assistant clients that support MCP, enabling error insights within those interfaces.
-- **Rollbar-based debugging data:** Surfaces Rollbar error information (e.g., for monitoring, observability, and debugging workflows) to help find and fix code issues faster.
-- **Hosted by Pipedream:** Operated via Pipedream’s MCP infrastructure, so you don’t need to host your own MCP server.
+- **Error Retrieval**: Access detailed error information including stack traces, occurrences, and context
+- **Project Management**: View and manage Rollbar projects and their configurations
+- **Deployment Tracking**: Monitor deployments and correlate errors with releases
+- **Error Analysis**: Analyze error patterns, trends, and impact on users
+- **AI-Powered Diagnostics**: Use AI to identify root causes and suggest fixes
 
-## How It’s Used
+## Error Tracking Capabilities
 
-- Add the static MCP server URL to your MCP-compatible chat or AI application.
-- Authenticate within your client when prompted to connect to Rollbar through the MCP server.
+### Comprehensive Error Monitoring
+- Real-time error detection and alerting
+- Detailed stack traces and debugging context
+- User impact analysis
+- Error grouping and deduplication
 
-## Pricing
+### Deployment Correlation
+- Track errors introduced by new deployments
+- Compare error rates across versions
+- Identify regression patterns
+- Monitor rollout health
 
-- Not specified in the provided content.
+### Team Collaboration
+- Assign errors to team members
+- Track error resolution status
+- Comment and collaborate on fixes
+- Integration with issue trackers
+
+## Use Cases
+
+### Rapid Debugging
+- Query errors by time range, severity, or environment
+- Get AI-assisted analysis of error patterns
+- Identify critical issues affecting users
+
+### Release Monitoring
+- Track error rates after deployments
+- Identify new errors introduced in releases
+- Monitor application health metrics
+
+### Proactive Error Management
+- Detect error trends before they impact users
+- Analyze error frequency and patterns
+- Prioritize fixes based on user impact
+
+## Integration
+
+Works with AI coding assistants like Claude Code, Cursor, and other MCP-compatible tools to enable conversational error monitoring and debugging workflows.

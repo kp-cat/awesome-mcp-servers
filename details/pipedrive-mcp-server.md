@@ -1,88 +1,33 @@
-## Pipedrive MCP Server
+## Overview
 
-### Overview
-Pipedrive MCP Server is an MCP-compatible integration endpoint that connects applications (such as chat clients) to Pipedrive, a sales-focused CRM platform. It exposes a set of ready-made actions for managing people, organizations, deals, leads, and notes in Pipedrive via a static MCP server URL.
+The Pipedrive MCP Server enables AI assistants to interface directly with Pipedrive's CRM platform, providing access to 16 tools spanning users, leads, pipelines, organizations, deals, and more. This integration allows you to manage your sales pipeline using natural language commands through AI-powered tools.
 
-**MCP Server URL:** `https://mcp.pipedream.net/v2`
+## Features
 
----
+- **Lead Management**: Access and manage leads with filtering and tracking capabilities
+- **Pipeline Operations**: View and manage sales pipelines, stages, and deal progression
+- **Organization Management**: Create, update, and search organizations in your CRM
+- **Deal Tracking**: Monitor deals, track revenue, and analyze sales performance
+- **User Management**: Manage team members and their CRM access
+- **Natural Language Queries**: Ask questions like "Show me all high-value deals in the negotiation stage"
 
-### Features
+## Use Cases
 
-#### MCP Server & Configuration
-- Static MCP server URL usable with any compatible client.
-- Connect Pipedrive account via sign-in and OAuth-based authentication.
-- Can be added to various chat clients or applications as an MCP server.
-- Central configuration through the Pipedream configuration page (for setup and reference).
+### Sales Intelligence
+- Analyze your sales pipeline and identify bottlenecks
+- Track deal performance and conversion rates
+- Generate insights about high-value opportunities
 
-#### Available Tools (Actions)
-The server currently exposes **17 actions** as tools (the following are listed explicitly in the content):
+### Meeting Preparation
+- Quickly retrieve customer information before calls
+- Review deal history and previous interactions
+- Access organization details and contact information
 
-##### People (Persons)
-- **Add Person**  
-  - Create a new person in Pipedrive.  
-  - Uses Pipedrive’s People API.
+### Pipeline Management
+- Update deal stages and status through conversational commands
+- Identify at-risk deals and drop-off points
+- Monitor team performance and individual quotas
 
-- **Update Person**  
-  - Update an existing person’s data (e.g., fields, contact info) by ID.
+## Integration
 
-- **Get person details**  
-  - Retrieve full details of a person by their ID.
-
-- **Search persons**  
-  - Search all persons by name, email, phone, notes, and/or custom fields.  
-  - Wrapper around `/v1/itemSearch` with a narrower OAuth scope.  
-  - Supports filtering found persons by Organization ID.
-
-- **Merge Persons**  
-  - Merge two persons into a single record.
-
-##### Deals
-- **Update Deal**  
-  - Update properties of an existing deal using Pipedrive’s Deals API.
-
-- **Merge Deals**  
-  - Merge two deals into one consolidated record.
-
-##### Leads
-- **Add Lead**  
-  - Create a new lead in Pipedrive.
-
-- **Get Lead by ID**  
-  - Retrieve a lead by its unique ID.
-
-- **Get All Leads**  
-  - Fetch all leads from Pipedrive.
-
-- **Search Leads**  
-  - Search for leads by name or email.
-
-##### Organizations
-- **Add Organization**  
-  - Create a new organization in Pipedrive using the Organizations API.
-
-##### Notes
-- **Add Note**  
-  - Add a new note in Pipedrive.
-
-- **Search Notes**  
-  - Search for notes in Pipedrive.
-
-- **Remove Duplicate Notes**  
-  - Identify and remove duplicate notes from an object in Pipedrive (uses underlying get-notes and delete-notes capabilities).
-
-> Note: The content states there are **17 actions** available as tools; only those explicitly listed above are described in the provided text.
-
----
-
-### Category & Use Cases
-- **Category:** Business & Commerce – MCP Servers
-- **Primary use cases:**
-  - Integrate Pipedrive CRM operations into chat-based or MCP-compatible applications.
-  - Automate CRM tasks like creating and updating people, organizations, deals, leads, and notes.
-  - Search, retrieve, and clean up CRM data (e.g., deduplicating notes, merging records).
-
----
-
-### Pricing
-No pricing information for the Pipedrive MCP Server is provided in the available content.
+Works with AI assistants like Claude, Cursor, and other MCP-compatible tools. Connect to your Pipedrive account to enable AI-powered CRM automation and analytics.

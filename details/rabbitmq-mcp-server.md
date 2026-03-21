@@ -1,27 +1,53 @@
-# RabbitMQ MCP Server
+## Overview
 
-**Category:** Database & Messaging MCP Servers  
-**Brand:** RabbitMQ  
-**Source:** https://mcp.pipedream.com/app/rabbitmq  
-**MCP Server URL:** `https://mcp.pipedream.net/v2`
-
-## Description
-RabbitMQ MCP Server is an MCP-compatible server that integrates with RabbitMQ, exposing RabbitMQ’s reliable messaging and streaming broker capabilities to MCP-based applications and workflows. It is designed to work with RabbitMQ deployments in cloud, on-premises, or local environments.
+The RabbitMQ MCP Server provides tools for interacting with RabbitMQ, a distributed message broker that collects streaming data from multiple sources to route it to different destinations for processing. This server enables AI assistants to manage queues, inspect messages, and perform broker operations.
 
 ## Features
-- **MCP integration**: Provides a Model Context Protocol (MCP) server interface for RabbitMQ, enabling tools and applications that support MCP to interact with RabbitMQ.
-- **Messaging and streaming broker access**: Exposes RabbitMQ’s core messaging and streaming capabilities to MCP-based workflows.
-- **Static server URL**: Uses a single static MCP server endpoint (`https://mcp.pipedream.net/v2`) that works across compatible clients, with authentication handled when adding the server to an application.
-- **Client-agnostic setup**: Can be added to different chat or MCP clients; configuration guidance is available per client type via the configuration page.
-- **Cloud, on‑premises, and local compatibility**: Intended to work with RabbitMQ instances deployed in cloud environments, on-premises data centers, or on local machines.
 
-## Configuration
-- Connect your RabbitMQ-related account within Pipedream, then select your client to get specific setup steps.
-- Copy the MCP server URL and add it as an MCP server in your compatible application or chat client.
-- Additional configuration details are available on the Pipedream configuration page (linked from the app).
+- **Queue Inspection**: View and analyze message queues and their contents
+- **Message Management**: Inspect, publish, and consume messages
+- **Exchange Operations**: Manage message exchanges and routing configurations
+- **Connection Monitoring**: Monitor connections and channels
+- **Virtual Host Management**: Work with different virtual hosts and permissions
 
-## Available Tools
-- The MCP server exposes “tools” (actions) for RabbitMQ via Pipedream. The specific actions are dynamically loaded in the Pipedream UI (not listed explicitly in the provided content).
+## RabbitMQ Capabilities
+
+### Message Broker Features
+- Reliable message delivery with acknowledgments
+- Flexible routing with exchanges and bindings
+- Multiple messaging patterns (pub/sub, work queues, RPC)
+- Message persistence and durability
+- Priority queues and message TTL
+
+### Enterprise Features
+- High availability through clustering
+- Federation for distributed deployments
+- Management UI and monitoring tools
+- Plugin ecosystem for extensibility
+
+## Use Cases
+
+### Development & Debugging
+- Inspect message payloads during development
+- Validate message formats and schemas
+- Test queue configurations and routing
+- Monitor message flow through the system
+
+### Operations Management
+- Check queue depths and consumer counts
+- Monitor broker health and performance
+- Manage dead letter queues
+- Troubleshoot message delivery issues
+
+### Integration Testing
+- Verify message delivery in integration tests
+- Validate message transformations
+- Test error handling and retry logic
+
+## Integration
+
+Works with AI assistants like Claude Desktop and Cursor to enable conversational RabbitMQ management. Particularly useful for teams building microservices and event-driven architectures.
 
 ## Pricing
-- No pricing details are provided in the available content.
+
+RabbitMQ is free and open-source under the Mozilla Public License. Cloud-hosted options available through providers like CloudAMQP.

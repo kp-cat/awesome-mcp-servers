@@ -1,75 +1,51 @@
-# LaunchDarkly MCP Server
+## Overview
 
-**Category:** Development Tools / MCP Servers  
-**Brand:** LaunchDarkly  
-**Slug:** `launchdarkly-mcp-server`
-
-An OAuth-enabled MCP (Model Context Protocol) server that connects to LaunchDarkly’s feature management and experimentation platform. It exposes LaunchDarkly operations (like managing feature flags and projects) as tools that can be used from MCP-compatible chat clients and applications.
-
-![LaunchDarkly](https://launchdarkly.com/static/brand/launchdarkly-logo-tagline.svg)
-
----
+LaunchDarkly provides three hosted MCP servers, each focused on a different product area: feature management for managing feature flags, AI Configs for managing AI configurations and variations, and observability for querying logs, traces, errors, and dashboards. Create, evaluate, and modify feature flags from within your IDE using natural language.
 
 ## Features
 
-### Secure OAuth-based access
-- Connects to LaunchDarkly using OAuth for authenticated access.  
-- Uses a static MCP server URL for all clients:
-  - `https://mcp.pipedream.net/v2`
-- Authentication occurs when adding the server to an MCP-compatible application.
+### Feature Management Server
+- **create-flag**: Create new feature flags in a project (defaults to boolean temporary flag, OFF in all environments)
+- **get-flag**: Get detailed configuration for a single feature flag scoped to a specific environment
+- **list-flags**: Search and browse feature flags in a project
+- **toggle-flag**: Turn a feature flag's targeting on or off in a specific environment
 
-### MCP server integration
-- Designed for use via the Model Context Protocol (MCP) with chat clients and other MCP-enabled tools.
-- Can be added to supported clients by specifying the MCP server URL and completing OAuth sign-in.
+### AI Configs Server
+- Manage AI model configurations and variations
+- Control AI feature rollouts and experiments
+- Test different AI model settings across environments
 
-### Available tools (actions)
-The server exposes LaunchDarkly functionality as tools/actions:
+### Observability Server
+- Query logs, traces, and error data
+- Access dashboards and metrics
+- Monitor feature flag usage and performance
 
-1. **Update Feature Flag**  
-   - Update an existing feature flag using a JSON object.
+## Use Cases
 
-2. **Toggle Feature Flag**  
-   - Toggle a feature flag’s status between active and inactive.
+### Progressive Deployment
+- Gradually roll out features to subsets of users
+- Control feature availability by environment
+- Manage percentage-based rollouts
 
-3. **List Projects**  
-   - Retrieve a list of all projects in the LaunchDarkly account.
+### A/B Testing & Experimentation
+- Configure multivariate tests
+- Track experiment performance
+- Analyze feature impact on key metrics
 
-4. **List Members**  
-   - List all members (users) associated with the LaunchDarkly account.
+### Risk Mitigation
+- Instantly disable problematic features
+- Test in production with controlled exposure
+- Separate deployment from release
 
-5. **List Feature Flags**  
-   - List all feature flags within the account.
+### Environment Management
+- Manage flags across dev, staging, and production
+- Configure different targeting rules per environment
+- Synchronize flag states across teams
 
-6. **List Environments**  
-   - List all environments configured in LaunchDarkly.
+## Integration
 
-7. **Get Project**  
-   - Retrieve a single project by its key.
-
-8. **Get Feature Flag**  
-   - Retrieve a specific feature flag by its key.
-
-9. **Get Feature Flag Status**  
-   - Get the current status of a specific feature flag.
-
-10. **Evaluate Feature Flag**  
-    - Evaluate an existing feature flag for a specific user or general context.
-
----
-
-## Technical details
-- **Protocol:** Model Context Protocol (MCP)
-- **Auth method:** OAuth (account sign-in required)  
-- **Base MCP server URL:** `https://mcp.pipedream.net/v2`
-
----
+Works with any AI client supporting MCP including Cursor, Windsurf, Claude Desktop, and Raycast. Supports both interactive login via Device Authorization Grant and automated login via Private Key JWT.
 
 ## Pricing
-Pricing details are not provided in the available content. Users should refer to Pipedream or LaunchDarkly pricing pages for cost information related to usage of this MCP server and the underlying LaunchDarkly account.
 
----
-
-## Tags
-- Feature flags  
-- Experimentation  
-- DevOps
+Free tier available with usage-based pricing for advanced features. Enterprise plans include dedicated support and custom integrations.

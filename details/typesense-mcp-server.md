@@ -1,63 +1,43 @@
-# Typesense MCP Server
-
-A Model Context Protocol (MCP) server that connects Typesense’s search engine to LLMs, enabling discovery, search, and analysis over Typesense collections.
-
-**Source:** https://github.com/suhail-ak-s/mcp-typesense-server
-
----
-
 ## Overview
 
-Typesense MCP Server exposes Typesense collections to LLMs via the Model Context Protocol. It lets you perform search and exploration of indexed data directly from compatible LLM tools and environments.
-
----
+The Typesense MCP Server provides AI assistants with tools to interact with Typesense, an open-source search engine that offers fast, typo-tolerant search experiences. This server enables you to manage collections, perform health checks, and export data through natural language commands.
 
 ## Features
 
-- **MCP integration**
-  - Implements a Model Context Protocol server for Typesense.
-  - Allows LLM agents/tools that support MCP to query Typesense.
+- **Health Monitoring**: Check Typesense server health and status
+- **Collection Management**: List, describe, create, and manage search collections
+- **Data Export**: Export collection data for backup or analysis
+- **Search Operations**: Perform searches across collections with typo tolerance
+- **Schema Inspection**: View and analyze collection schemas and field configurations
 
-- **Search over Typesense collections**
-  - Exposes Typesense’s search capabilities to LLMs.
-  - Enables discovery, search, and analysis across one or more Typesense collections.
+## Typesense Capabilities
 
-- **API-based access**
-  - Connects to an existing Typesense instance via its API.
-  - Works with standard Typesense collections and indexes (e.g., documents, records) already stored in Typesense.
+### Fast Search Performance
+- In-memory search index for sub-50ms queries
+- Typo-tolerant fuzzy matching
+- Faceted search and filtering
+- Geo-search support
 
-- **LLM-oriented tooling**
-  - Designed for usage in LLM chat environments that can load MCP servers.
-  - Lets LLMs interact programmatically with Typesense data without custom glue code.
+### Developer-Friendly
+- Simple REST API
+- Easy to set up and maintain
+- Predictable resource usage
+- No complex configuration required
 
-- **Node.js project structure**
-  - Distributed as an npm-based project (with `package.json`, `bin.js`).
-  - TypeScript configuration via `tsconfig.json`.
-
-- **Containerization support**
-  - Includes a `Dockerfile` for building and running the server in containers.
-
-- **CLI / script integration**
-  - Provides an executable entry point (`bin.js`).
-  - Includes a helper script `launch-claude-with-typesense.sh` aimed at launching Claude with this MCP server configured (for environments that support that script).
-
-- **Configuration artifacts**
-  - `glama.json` and other project configs to define MCP server metadata / capabilities.
-
-- **Open source licensing**
-  - Distributed with an OSS license (`LICENSE` file in the repo).
-
----
+### Open Source Alternative
+- Alternative to Algolia and Pinecone
+- Easier to use than ElasticSearch
+- Self-hosted or cloud options
+- Transparent pricing
 
 ## Use Cases
 
-- Letting LLMs search and summarize records stored in Typesense.
-- Powering conversational search over Typesense-backed documentation or datasets.
-- Enabling agent-style tools to perform structured lookups and analysis of indexed data.
+- Build fast product search experiences
+- Implement autocomplete and instant search
+- Create location-based search applications
+- Manage document and content search
+- Develop recommendation engines
 
----
+## Integration
 
-## Pricing
-
-- Open source project; the repository does not list any paid plans.
-- Usage cost is limited to running your own infrastructure and any associated Typesense hosting costs.
+Works with Claude Desktop, Cursor, and other MCP-compatible AI assistants to enable conversational search management and operations.
