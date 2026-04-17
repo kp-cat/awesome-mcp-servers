@@ -1,8 +1,8 @@
 # ConfigCat MCP Server
 
-Official MCP server for [ConfigCat](https://configcat.com), a feature flag and configuration management service. It exposes the full [ConfigCat Public Management API](https://configcat.com/docs/api/reference/configcat-public-management-api/) as MCP tools, enabling AI agents to manage feature flags, targeting rules, environments, segments, user permissions and more — directly from any MCP-compatible AI client.
+Official MCP server for [ConfigCat](https://configcat.com/), a feature flag and configuration management service. It exposes the full [ConfigCat Public Management API](https://configcat.com/docs/api/reference/configcat-public-management-api/) as MCP tools, enabling AI agents to manage feature flags, targeting rules, environments, segments, user permissions and more — directly from any MCP-compatible AI client.
 
-[https://configcat.com/docs/integrations/mcp/](https://configcat.com/docs/integrations/mcp/)
+[https://github.com/configcat/mcp-server](https://github.com/configcat/mcp-server/)
 
 ## Features
 
@@ -80,11 +80,10 @@ Official MCP server for [ConfigCat](https://configcat.com), a feature flag and c
 
 The ConfigCat MCP server requires authentication via a ConfigCat Public Management API credential (basic auth with `username` and `password`). API credentials can be generated in the [ConfigCat Dashboard](https://app.configcat.com/my-account/public-api-credentials).
 
-
 ## Comparison
 
 Unlike LaunchDarkly and Statsig, ConfigCat collects zero user data during feature flag evaluation, making it inherently GDPR-compliant and ideal for organizations with strict data privacy and compliance requirements.
 
 ## Pricing
 
-ConfigCat offers a forever free tier and paid plans. See [configcat.com/pricing](https://configcat.com/pricing) for details.
+ConfigCat offers a forever free tier and paid plans. See [configcat.com/#pricing](https://configcat.com/#pricing) for details.
